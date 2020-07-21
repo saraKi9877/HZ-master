@@ -45,10 +45,11 @@
             android:tag="2"
             tab:iconId="@drawable/tab_mine_selector"
             tab:txtId="@string/mine" />
+
         <com.client.tok.widget.BottomTabView
             android:id="@+id/id_home_Translate_rb"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="46dp"
             android:layout_weight="1"
             android:gravity="center"
             android:tag="3"
