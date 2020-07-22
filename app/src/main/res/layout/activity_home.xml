@@ -16,6 +16,18 @@
         android:paddingBottom="@dimen/spacing_4">
 
         <com.client.tok.widget.BottomTabView
+            android:id="@+id/id_home_post_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:tag="4"
+            tab:iconId="@drawable/post"
+            tab:isSelected="true"
+            tab:txtId="@string/Post"/>
+
+
+        <com.client.tok.widget.BottomTabView
             android:id="@+id/id_home_msg_rb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -23,7 +35,6 @@
             android:gravity="center"
             android:tag="0"
             tab:iconId="@drawable/tab_message_selector"
-            tab:isSelected="true"
             tab:txtId="@string/message" />
 
         <com.client.tok.widget.BottomTabView
@@ -49,11 +60,13 @@
         <com.client.tok.widget.BottomTabView
             android:id="@+id/id_home_Translate_rb"
             android:layout_width="wrap_content"
-            android:layout_height="46dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
             android:tag="3"
-            tab:txtId="@string/T" />
+            tab:iconId="@drawable/translate"
+            tab:txtId="@string/T"
+            tab:isSelected="true"/>
     </LinearLayout>
 
     <View

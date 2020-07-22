@@ -2,7 +2,6 @@
 <resources>
     <string name="create_account_encrypted_profile_error">Android版暂时不支持加密文件</string>
     <string name="create_account_load_profile_unknown">未知的文件加载异常</string>
-
     <!-- User Status -->
     <string name="status_online">在线</string>
     <string name="status_away">离开</string>
