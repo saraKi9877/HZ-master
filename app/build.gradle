@@ -119,13 +119,13 @@ android {
 
     buildTypes {
         debug {
-            applicationIdSuffix ".beta"
-            resValue("string", "app_name", "Tok_beta")
+            applicationIdSuffix ".two"
+            resValue("string", "app_name", "howzit")
             buildConfigField "boolean", "LOG_DEBUG", TRUE
         }
         release {
             signingConfig signingConfigs.config
-            resValue("string", "app_name", "Tok")
+            resValue("string", "app_name", "howzit")
             buildConfigField "boolean", "LOG_DEBUG", FALSE
             minifyEnabled false
             zipAlignEnabled true
@@ -133,7 +133,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-android.pro'
             applicationVariants.all { variant ->
                 variant.outputs.all {
-                    outputFileName = "Tok_v${versionName}_${releaseTime()}.apk"
+                    outputFileName = "howzit.apk"
                 }
             }
         }
