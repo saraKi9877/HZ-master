@@ -272,7 +272,7 @@ public class TranslationActiviy extends AppCompatActivity implements TextToSpeec
         super.onDestroy();
     }
     //  SUBCLASS TO TRANSLATE TEXT ON BACKGROUND THREAD
-    private class TranslateText extends AsyncTask<String,Void,String> {
+    private class TranslateText extends AsyncTask<String,Void,String>  {
         @Override
         protected String doInBackground(String... input) {
             Uri baseUri = Uri.parse(BASE_REQ_URL);

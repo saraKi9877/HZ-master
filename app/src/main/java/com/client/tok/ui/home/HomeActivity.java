@@ -27,6 +27,7 @@ public class HomeActivity extends BaseCommonTitleActivity
     private String TAG = "TokHome";
 
     private HomeContract.IHomePresenter mPresenter;
+    private BottomTabView mPostView;
 
     private BottomTabView mRecentMsgView;
     private BottomTabView mTranslateView;
@@ -54,11 +55,13 @@ public class HomeActivity extends BaseCommonTitleActivity
     }
 
     public void initView() {
+        mPostView=$(R.id.id_home_post_rb);
         mRecentMsgView = $(R.id.id_home_msg_rb);
         mContactsView = $(R.id.id_home_contacts_rb);
         mMineView = $(R.id.id_home_mine_rb);
         mViewPager = $(R.id.id_home_vp);
         mTranslateView= $(R.id.id_home_Translate_rb);
+        mPostView.setOnClickListener(this);
         mTranslateView.setOnClickListener(this);
         mRecentMsgView.setOnClickListener(this);
         mContactsView.setOnClickListener(this);
@@ -105,6 +108,10 @@ public class HomeActivity extends BaseCommonTitleActivity
     public void onClick(View v) {
         int id = v.getId();
         switch (id) {
+            case R.id. id_home_post_rb:
+                Intent intent_1=new Intent(HomeActivity.this,POST.class);
+                HomeActivity.this.startActivity(intent_1);
+                break;
             case R.id. id_home_Translate_rb:
                 Intent intent_2=new Intent(HomeActivity.this,TranslationActiviy.class);
                 HomeActivity.this.startActivity(intent_2);

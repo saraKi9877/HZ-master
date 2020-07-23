@@ -110,7 +110,7 @@
     <color name="status_stoke">@color/c_ffffff</color>
 
     <!--toorbar背景-->
-    <color name="toolbar_bg">#0D47A1</color>
+    <color name="toolbar_bg">#ffff</color>
     <!--内容背景-->
     <color name="content_bg">#FFFFFF</color>
     <!--会话底部选择文件背景-->

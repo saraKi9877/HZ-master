@@ -35,12 +35,9 @@
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-
-    <!-- this may get the app banned from google play :-( -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- this may get the app banned from google play :-( -->
     <!-- <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" /> -->
     <!-- this may get the app banned from google play :-( -->
-
     <supports-screens
         android:anyDensity="true"
         android:largeScreens="true"
@@ -57,6 +54,13 @@
         android:persistent="true"
         android:theme="@style/AntoxTheme"
         tools:replace="android:allowBackup,android:label">
+        <activity android:name=".ui.home.POST"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <activity android:name=".Post" />
         <activity
             android:name=".ui.splash.SplashActivity"
             android:launchMode="singleTask"
@@ -231,14 +235,11 @@
         <service
             android:name=".service.ChatMainService$GrayInnerService"
             android:exported="false"
-            android:label="innerService" />
-
-        <!-- <service -->
+            android:label="innerService" /> <!-- <service -->
         <!-- android:name="com.client.tok.booter.KeepAliveJobService" -->
         <!-- android:exported="false" -->
         <!-- android:label="keepAliveService" -->
         <!-- android:permission="android.permission.BIND_JOB_SERVICE" /> -->
-
         <receiver
             android:name=".booter.MMReceiver$BootReceiver"
             android:directBootAware="false"
@@ -282,7 +283,7 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <activity android:name=".ui.home.TranslationActiviy"></activity>
+        <activity android:name=".ui.home.TranslationActiviy" />
     </application>
 
 </manifest>
