@@ -45,22 +45,22 @@ public class SettingActivity extends BaseCommonTitleActivity
     public void initView() {
         mChangePwdIiv = $(R.id.id_setting_change_pwd_iiv);
         mChangePwdIiv.setOnClickListener(this);
-        mExportFileIiv = $(R.id.id_setting_export_file_iiv);
-        mExportFileIiv.setOnClickListener(this);
+       // mExportFileIiv = $(R.id.id_setting_export_file_iiv);
+        //mExportFileIiv.setOnClickListener(this);
 
         mResetIdIiv = $(R.id.id_setting_reset_id_iiv);
         mResetIdIiv.setOnClickListener(this);
         mNotifyIiv = $(R.id.id_setting_notify_iiv);
         mNotifyIiv.setOnClickListener(this);
 
-        mAutoReceiveFileIiv = $(R.id.id_setting_auto_file_iiv);
-        mAutoReceiveFileIiv.setToggleEnable(
-            PreferenceUtils.getBoolean(PreferenceUtils.AUTO_RECEIVE_FILE, true));
+        //mAutoReceiveFileIiv = $(R.id.id_setting_auto_file_iiv);
+        //mAutoReceiveFileIiv.setToggleEnable(
+            //PreferenceUtils.getBoolean(PreferenceUtils.AUTO_RECEIVE_FILE, true));
 
-        mClearChatLogoutIiv = $(R.id.id_setting_clear_chat_logout_iiv);
-        mClearChatLogoutIiv.setToggleEnable(
-            PreferenceUtils.getBoolean(PreferenceUtils.CLEAR_MSG_LOGOUT, false));
-        mClearChatLogoutIiv.setToggleListener(this);
+       // mClearChatLogoutIiv = $(R.id.id_setting_clear_chat_logout_iiv);
+        //mClearChatLogoutIiv.setToggleEnable(
+            //PreferenceUtils.getBoolean(PreferenceUtils.CLEAR_MSG_LOGOUT, false));
+        //mClearChatLogoutIiv.setToggleListener(this);
         mClearChatIiv = $(R.id.id_setting_clear_chat_iiv);
         mClearChatIiv.setOnClickListener(this);
         mDelProfileIiv = $(R.id.id_setting_del_profile_iiv);
@@ -105,9 +105,9 @@ public class SettingActivity extends BaseCommonTitleActivity
             case R.id.id_setting_change_pwd_iiv:
                 PageJumpIn.jumpChangePwdPage(getActivity(), null);
                 break;
-            case R.id.id_setting_export_file_iiv:
-                mSettingPresenter.exportAccountInfo();
-                break;
+            //case R.id.id_setting_export_file_iiv:
+                //mSettingPresenter.exportAccountInfo();
+                //break;
 
             case R.id.id_setting_reset_id_iiv:
                 DialogFactory.show2BtnDialog(this,
@@ -123,18 +123,7 @@ public class SettingActivity extends BaseCommonTitleActivity
             case R.id.id_setting_notify_iiv:
                 PageJumpIn.jumpSetNotificationPage(this);
                 break;
-            case R.id.id_setting_auto_file_iiv:
-                if (v instanceof ToggleButton) {
-                    ToggleButton tb = (ToggleButton) v;
-                    PreferenceUtils.saveBoolean(PreferenceUtils.CLEAR_MSG_LOGOUT, tb.isChecked());
-                }
-                break;
-            case R.id.id_info_item_tb:
-                if (v instanceof ToggleButton) {
-                    ToggleButton tb = (ToggleButton) v;
-                    mSettingPresenter.clearMsgLogout(tb.isChecked());
-                }
-                break;
+
             case R.id.id_setting_clear_chat_iiv:
                 DialogFactory.showPromptDialog(this,
                     StringUtils.getTextFromResId(R.string.clear_msg_confirm_prompt),
