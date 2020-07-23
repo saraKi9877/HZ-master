@@ -39,11 +39,11 @@ public class MinePresenter implements MineContract.IMinePresenter {
 
     @Override
     public void start() {
-        mFindFriendBotPk = BotManager.getInstance().getFindFriendBotPk();
-        mOfflineBotPk = BotManager.getInstance().getOfflineBotPk();
+        //mFindFriendBotPk = BotManager.getInstance().getFindFriendBotPk();
+        //mOfflineBotPk = BotManager.getInstance().getOfflineBotPk();
         getUserInfo();
         getUserStatus();
-        observerFindFriendBot();
+        //observerFindFriendBot();
     }
 
     private void getUserInfo() {
@@ -98,58 +98,7 @@ public class MinePresenter implements MineContract.IMinePresenter {
             });
     }
 
-    @Override
-    public void showFindFriendBot() {
-        PageJumpIn.jumpFriendInfoPage(mMineView.getActivity(), "-1", mFindFriendBotPk);
-        PreferenceUtils.setHasShowFindFriendBotFeat();
-    }
 
-    @Override
-    public void showOfflineBot() {
-        PageJumpIn.jumpOfflineBotInfoPage(mMineView.getActivity());
-        PreferenceUtils.setHasShowOfflineBotFeat();
-    }
-
-    @Override
-    public void observerFindFriendBot() {
-        //boolean newFeat = PreferenceUtils.hasShowFindFriendBotFeat();
-        //if (!newFeat) {
-        //    mMineView.showFindFriendBotNew(StringUtils.getTextFromResId(R.string.new_tag),
-        //        R.style.UnReadMsgRed, R.drawable.unread_feature_indicator_white);
-        //} else {
-        //    mMineView.showFindFriendBotNew(null, -1, -1);
-        //}
-        State.infoRepo()
-            .getFriendInfoLive(mFindFriendBotPk)
-            .observe(mMineView, new Observer<ContactInfo>() {
-                @Override
-                public void onChanged(@Nullable ContactInfo contactInfo) {
-                    LogUtil.i(TAG, "observer find friend bot:" + (contactInfo == null));
-                    if (contactInfo == null) {
-                        mMineView.showFindFriendBotNew(
-                            StringUtils.getTextFromResId(R.string.new_tag), R.style.UnReadMsgRed,
-                            R.drawable.unread_num_indicator_red);
-                    } else {
-                        mMineView.showFindFriendBotNew(null, -1, -1);
-                    }
-                }
-            });
-
-        State.infoRepo()
-            .getFriendInfoLive(mOfflineBotPk)
-            .observe(mMineView, new Observer<ContactInfo>() {
-                @Override
-                public void onChanged(@Nullable ContactInfo contactInfo) {
-                    LogUtil.i(TAG, "observer offline  bot:" + (contactInfo == null));
-                    if (contactInfo == null) {
-                        mMineView.showOfflineBotNew(StringUtils.getTextFromResId(R.string.new_tag),
-                            R.style.UnReadMsgRed, R.drawable.unread_num_indicator_red);
-                    } else {
-                        mMineView.showOfflineBotNew(null, -1, -1);
-                    }
-                }
-            });
-    }
 
     @Override
     public void onDestroy() {

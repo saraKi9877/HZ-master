@@ -50,18 +50,12 @@ public class MineFragment extends BaseFragment
         mUsernameTv = $(view, R.id.id_mine_user_name_tv);
         mTokIdTv = $(view, R.id.id_mine_tok_id_iiv);
         mTokIdTv.setOnClickListener(this);
-        mFindFriendBotIIV = $(view, R.id.id_mine_find_friend_iiv);
-        mFindFriendBotIIV.setOnClickListener(this);
-        mOfflineBotIIV = $(view, R.id.id_mine_offline_iiv);
-        mOfflineBotIIV.setOnClickListener(this);
+
 
         mUserStatusTv = $(view, R.id.id_mine_status_iiv);
         mSignatureTv = $(view, R.id.id_mine_signature_tv);
         //
-        mSafeLayout = $(view, R.id.id_mine_safe_layout);
-        mSafeLayout.setOnClickListener(this);
-        mAboutLayout = $(view, R.id.id_mine_about_layout);
-        mAboutLayout.setOnClickListener(this);
+
         mSettingLayout = $(view, R.id.id_mine_setting_layout);
         mSettingLayout.setOnClickListener(this);
         new MinePresenter(this);
@@ -114,15 +108,7 @@ public class MineFragment extends BaseFragment
         mUserStatusTv.setContent(StringUtils.formatHtmlTxFromResId(statusResId));
     }
 
-    @Override
-    public void showFindFriendBotNew(String content, int style, int bg) {
-        mFindFriendBotIIV.setContent(content, style, bg);
-    }
 
-    @Override
-    public void showOfflineBotNew(String content, int style, int bg) {
-        mOfflineBotIIV.setContent(content, style, bg);
-    }
 
     @Override
     public void onDestroy() {
@@ -150,18 +136,7 @@ public class MineFragment extends BaseFragment
             case R.id.id_mine_tok_id_iiv:
                 PageJumpIn.jumpMyTokIdPage(getActivity());
                 break;
-            case R.id.id_mine_find_friend_iiv:
-                mMinePresenter.showFindFriendBot();
-                break;
-            case R.id.id_mine_offline_iiv:
-                mMinePresenter.showOfflineBot();
-                break;
-            case R.id.id_mine_safe_layout:
-                PageJumpIn.jumpSafePage(getActivity());
-                break;
-            case R.id.id_mine_about_layout:
-                PageJumpIn.jumpAboutUsPage(this.getActivity());
-                break;
+
             case R.id.id_mine_setting_layout:
                 PageJumpIn.jumpSettingPage(getActivity());
                 break;

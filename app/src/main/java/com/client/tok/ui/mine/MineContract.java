@@ -10,17 +10,17 @@ public class MineContract {
 
         void showStatus(String status);
 
-        void showFindFriendBotNew(String content, int style, int bg);
+        //void showFindFriendBotNew(String content, int style, int bg);
 
-        void showOfflineBotNew(String content, int style, int bg);
+        //void showOfflineBotNew(String content, int style, int bg);
     }
 
     public interface IMinePresenter extends BaseContract.IBasePresenter {
-        void showFindFriendBot();
+       // void showFindFriendBot();
 
-        void showOfflineBot();
+       // void showOfflineBot();
 
-        void observerFindFriendBot();
+       // void observerFindFriendBot();
 
         void onDestroy();
     }
