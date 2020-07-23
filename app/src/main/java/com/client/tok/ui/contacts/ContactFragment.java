@@ -130,7 +130,7 @@ public class ContactFragment extends BaseFragment
 
     @Override
     public void setOfflineBotVisible(boolean visible) {
-        mAddFriendView.setOfflineBotVisible(visible);
+        //mAddFriendView.setOfflineBotVisible(visible);
     }
 
     @Override

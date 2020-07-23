@@ -48,8 +48,8 @@ public class AddFriendView extends FrameLayout implements View.OnClickListener {
         mFindFriendBotView = this.findViewById(R.id.id_add_friend_find_bot_iiv);
         mFindFriendBotView.setOnClickListener(this);
 
-        mOfflineBotView = this.findViewById(R.id.id_add_friend_offline_bot_iiv);
-        mOfflineBotView.setOnClickListener(this);
+        //mOfflineBotView = this.findViewById(R.id.id_add_friend_offline_bot_iiv);
+        //mOfflineBotView.setOnClickListener(this);
     }
 
     @Override
@@ -69,9 +69,7 @@ public class AddFriendView extends FrameLayout implements View.OnClickListener {
                 PageJumpIn.jumpFriendInfoPage(getContext(), "-1",
                     BotManager.getInstance().getFindFriendBotPk());
                 break;
-            case R.id.id_add_friend_offline_bot_iiv:
-                PageJumpIn.jumpOfflineBotInfoPage(getContext());
-                break;
+
         }
     }
 
@@ -79,9 +77,9 @@ public class AddFriendView extends FrameLayout implements View.OnClickListener {
         mFindFriendBotView.setVisibility(visible ? View.VISIBLE : View.GONE);
     }
 
-    public void setOfflineBotVisible(boolean visible) {
-        mOfflineBotView.setVisibility(visible ? View.VISIBLE : View.GONE);
-    }
+    //public void setOfflineBotVisible(boolean visible) {
+        //mOfflineBotView.setVisibility(visible ? View.VISIBLE : View.GONE);
+    //}
 
     public void showNewContactRequestTag() {
         mNewFriendView.setFunctionIcon(R.drawable.unread_indicator_red);

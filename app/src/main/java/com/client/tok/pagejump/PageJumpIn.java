@@ -115,10 +115,10 @@ public class PageJumpIn extends BasePageJump {
         jump(context, intent);
     }
 
-    public static void jumpOfflineBotInfoPage(Context context) {
-        Intent intent = createIntent(context, OfflineBotActivity.class);
-        jump(context, intent);
-    }
+    //public static void jumpOfflineBotInfoPage(Context context) {
+        //Intent intent = createIntent(context, OfflineBotActivity.class);
+        //jump(context, intent);
+    //}
 
     public static void jumpOfflineBotDetailPage(Context context) {
         Intent intent = createIntent(context, OfflineBotDetailActivity.class);

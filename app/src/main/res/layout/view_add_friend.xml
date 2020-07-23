@@ -56,14 +56,6 @@
         fc:promptId="@string/find_friend_bot"
         fc:rightIconVisible="0" />
 
-    <com.client.tok.widget.ItemInfoView
-        android:id="@+id/id_add_friend_offline_bot_iiv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/id_add_friend_chat_id_iiv"
-        fc:lefIconId="@drawable/avatar_offline_bot_small"
-        fc:lineVisible="1"
-        fc:promptId="@string/off_line_bot"
-        fc:rightIconVisible="0" />
+
 
 </LinearLayout>

@@ -40,9 +40,9 @@ public class MsgPromptHolder extends BaseMsgHolder {
             @Override
             public void onClick(View v) {
                 int type = curMsg.getMsgTypeVal();
-                if (type == MessageType.PROMPT_ADD_OFFLINE_BOT.getType()) {
-                    PageJumpIn.jumpOfflineBotInfoPage(mContext);
-                }
+                //if (type == MessageType.PROMPT_ADD_OFFLINE_BOT.getType()) {
+                    //PageJumpIn.jumpOfflineBotInfoPage(mContext);
+                //}
             }
         });
     }
