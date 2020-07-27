@@ -30,3 +30,6 @@ Issues: [https://github.com/InsightIM/Tok-Android/issues](https://github.com/Ins
 
 ## Contributing Ideas
 Have something you want to say about Tok or want to be part of the conversation? Connect us please！
+
+## Licenses:
+This app has GPL Licenses.
